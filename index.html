@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alphabet Clash</title>
+    <!-- Daisy UI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- css file link -->
+    <link rel="stylesheet" href="./style/styles.css">
+</head>
+
+<body class="min-h-screen bg-[#010313] bg-[url(./images/background.png)] bg-no-repeat bg-center font-poppins">
+    <main>
+        <section id="home" class="home min-h-screen flex flex-col justify-center items-center">
+            <div class="flex flex-col items-center gap-5">
+                <h1 class="text-8xl font-extrabold text-center font-anton">ALPHABET CLASH</h1>
+                <p class="mt-6 text-2xl">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
+                <button id="btn-home" class="btn"> Play Now</button>
+            </div>
+        </section>
+        <section id="playGround" class="playGround  hidden ">
+            <div class="pt-20 flex flex-col justify-center items-center gap-8">
+                <!-- screen part -->
+                <div class="border-8 border-[#010313CC] rounded-md">
+                    <div class="artboard artboard-horizontal phone-6  bg-[#FFFFFFB3]">
+                        <div class="flex justify-center ">
+                            <p class="bg-[#2F2941] text-white text-center rounded-b-lg p-2">Don't Watch Key Board while
+                                playing...</p>
+                        </div>
+                        <div class="flex justify-center items-center h-full">
+                            <p id="alphabet" class="text-black text-9xl font-bold uppercase">Y</p>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- keyboard part -->
+                <div class="">
+                    <div class="flex justify-center gap-2 my-3 w-full">
+                        <kbd id="q" class="kbd text-2xl">q</kbd>
+                        <kbd id="w" class="kbd text-2xl">w</kbd>
+                        <kbd id="e" class="kbd text-2xl">e</kbd>
+                        <kbd id="r" class="kbd text-2xl">r</kbd>
+                        <kbd id="t" class="kbd text-2xl">t</kbd>
+                        <kbd id="y" class="kbd text-2xl">y</kbd>
+                        <kbd id="u" class="kbd text-2xl">u</kbd>
+                        <kbd id="i" class="kbd text-2xl">i</kbd>
+                        <kbd id="o" class="kbd text-2xl">o</kbd>
+                        <kbd id="p" class="kbd text-2xl">p</kbd>
+                    </div>
+                    <div class="flex justify-center gap-2 my-3 w-full">
+                        <kbd id="a" class="kbd text-2xl">a</kbd>
+                        <kbd id="s" class="kbd text-2xl">s</kbd>
+                        <kbd id="d" class="kbd text-2xl">d</kbd>
+                        <kbd id="f" class="kbd text-2xl">f</kbd>
+                        <kbd id="g" class="kbd text-2xl">g</kbd>
+                        <kbd id="h" class="kbd text-2xl">h</kbd>
+                        <kbd id="j" class="kbd text-2xl">j</kbd>
+                        <kbd id="k" class="kbd text-2xl">k</kbd>
+                        <kbd id="l" class="kbd text-2xl">l</kbd>
+                    </div>
+                    <div class="flex justify-center gap-2 my-3 w-full">
+                        <kbd id="z" class="kbd text-2xl">z</kbd>
+                        <kbd id="x" class="kbd text-2xl">x</kbd>
+                        <kbd id="c" class="kbd text-2xl">c</kbd>
+                        <kbd id="v" class="kbd text-2xl">v</kbd>
+                        <kbd id="b" class="kbd text-2xl">b</kbd>
+                        <kbd id="n" class="kbd text-2xl">n</kbd>
+                        <kbd id="m" class="kbd text-2xl">m</kbd>
+                        <kbd id="/" class="kbd text-2xl">/</kbd>
+                    </div>
+                </div>
+                <!-- Button -->
+                <div class="flex  justify-between items-center w-3/4">
+                    <button class="btn rounded-full bg-purple-500 text-white px-4 text-2xl">
+                        life
+                        <img src="./images/Group 23.svg" alt="">
+                        <span id="game-life">5</span>
+                    </button>
+                    <button id="btn-game" class="btn  rounded-full bg-purple-700 text-white px-4 text-2xl">
+                        score
+                        <img src="./images/monetization_on.svg" alt="">
+                        <span id="game-score">0</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section id="score" class="score  flex flex-col justify-center items-center min-h-screen hidden">
+            <div class="space-y-6 text-center bg-[#FFFFFF33] p-5 rounded-lg text-white">
+                <h2 class="text-2xl">Game Over !</h2>
+                <h1 class="text-white text-8xl "><span class="font-bold">Score :</span>
+                    <span id="final-score">14</span>
+                </h1>
+                <button id="btn-score" class="btn text-white">Play Again</button>
+                <p>practice makes you pro</p>
+            </div>
+        </section>
+    </main>
+    <script src="./js/ulities.js"></script>
+    <script src="./js/home.js"></script>
+    <script src="./js/playGround.js"></script>
+    <script src="./js/score.js"></script>
+</body>
+
+</html>
